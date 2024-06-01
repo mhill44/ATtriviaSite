@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adventure Time Trivia Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Adventure Time Trivia Game</h1>
+    <div id="question">Loading questions...</div>
+    <input type="text" id="userAnswer" placeholder="Type your answer here...">
+    <button id="submitAnswerButton">Submit Answer</button>
+    <div id="feedback"></div>
+    <div id="currentScore">Current Score: 0</div>
+    <div id="scoreboard">
+        <h2>Top Scores</h2>
+        <ul id="topScoresList"></ul>
+    </div>
+    <div id="userNamePrompt" style="display:none;">
+        <input type="text" id="userName" placeholder="Enter your name">
+        <button onclick="submitScore()">Save Score</button>
+    </div>
+    <footer>
+        <p>Game and Questions by AmsuAsari. I have no affiliation or permission from Cartoon Network or Adventure Time officials</p>
+        <div id="hitCounter">Page Hits: 0</div>
+    </footer>
+
+    <!-- Firebase SDKs and Initialization -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB2ytJ6BXgIEfxkEI34hY5IdA0Yg0VxTWw",
+        authDomain: "triviagame-7f7fc.firebaseapp.com",
+        projectId: "triviagame-7f7fc",
+        storageBucket: "triviagame-7f7fc.appspot.com",
+        messagingSenderId: "729631364309",
+        appId: "1:729631364309:web:9f9ee79b778ba161117e5c",
+        measurementId: "G-M8DDH19MP3"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const db = getFirestore(app);
+      window.db = db; // Making db globally available
+    </script>
+    <script type="module" src="trivia.js"></script>
+</body>
+</html>

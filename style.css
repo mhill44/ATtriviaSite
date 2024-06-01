@@ -1,0 +1,125 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+h1 {
+    color: #5a5a66; /* Red color for headers */
+    text-align: center;
+}
+
+/* Container for the question and interaction elements */
+#question {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #1976d2; /* Blue border for emphasis */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%; /* Ensures full width on small screens */
+    box-sizing: border-box;
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    border: 2px solid #d32f2f; /* Red border for input fields */
+    border-radius: 4px;
+    font-size: 16px; /* Slightly larger for touch devices */
+}
+
+/* Button styling */
+button {
+    background-color: #1976d2; /* Blue background for buttons */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+}
+
+/* Feedback message styling */
+#feedback, #currentScore {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Score display */
+#currentScore {
+    margin-top: 20px;
+    color: #d32f2f; /* Red color for the score display */
+}
+
+/* Username input and save score button */
+#userNamePrompt {
+    display: none; /* Hidden by default, shown at game end */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Scoreboard styles */
+#scoreboard {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #d32f2f; /* Red border for the scoreboard */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    width: 100%; /* Full width to accommodate smaller screens */
+}
+
+#scoreboard h2 {
+    text-align: center;
+    color: #444;
+}
+
+#topScoresList {
+    list-style: none;
+    padding: 0;
+}
+
+#topScoresList li {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+}
+
+#topScoresList li:last-child {
+    border-bottom: none;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom of the viewport */
+    color: #777;
+    font-size: 14px;
+}
+
+#hitCounter {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
